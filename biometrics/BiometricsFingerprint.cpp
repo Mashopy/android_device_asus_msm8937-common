@@ -43,8 +43,12 @@ typedef struct hw_module_info {
 } hw_module_info_t;
 
 static const hw_module_info_t kHALModules[] = {
-    {FINGERPRINT_HARDWARE_MODULE_ID, "fpc"},
-    {"gf_" FINGERPRINT_HARDWARE_MODULE_ID, "goodix"},
+    {FINGERPRINT_HARDWARE_MODULE_ID, "cdfinger"},
+    {FINGERPRINT_HARDWARE_MODULE_ID, "focal"},
+    {FINGERPRINT_HARDWARE_MODULE_ID, "goodix"},
+    {FINGERPRINT_HARDWARE_MODULE_ID, "leadcore"},
+    {FINGERPRINT_HARDWARE_MODULE_ID, "microarray"},
+    {FINGERPRINT_HARDWARE_MODULE_ID, "sunwave"},
 };
 
 using RequestStatus =
