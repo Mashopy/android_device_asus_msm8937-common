@@ -1,6 +1,8 @@
-cc_defaults {
-    name: "fingerprint_service_asus_msm8937_defaults",
+cc_binary {
+    name: "android.hardware.biometrics.fingerprint@2.1-service.asus_msm8937",
     defaults: ["hidl_defaults"],
+    init_rc: ["android.hardware.biometrics.fingerprint@2.1-service.asus_msm8937.rc"],
+    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.1-service.asus_msm8937.xml"],
     relative_install_path: "hw",
     srcs: [
         "BiometricsFingerprint.cpp",
@@ -15,19 +17,4 @@ cc_defaults {
         "android.hardware.biometrics.fingerprint@2.1",
     ],
     vendor: true,
-}
-
-cc_binary {
-    name: "android.hardware.biometrics.fingerprint@2.1-service.asus_msm8937",
-    defaults: ["fingerprint_service_asus_msm8937_defaults"],
-    init_rc: ["android.hardware.biometrics.fingerprint@2.1-service.asus_msm8937.rc"],
-    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.1-service.asus_msm8937.xml"],
-}
-
-cc_binary {
-    name: "android.hardware.biometrics.fingerprint@2.1-service.asus_msm8937-32",
-    defaults: ["fingerprint_service_asus_msm8937_defaults"],
-    compile_multilib: "32",
-    init_rc: ["android.hardware.biometrics.fingerprint@2.1-service.asus_msm8937-32.rc"],
-    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.1-service.asus_msm8937-32.xml"],
 }
